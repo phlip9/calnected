@@ -15,6 +15,10 @@
     },
   ];
 
+  String.prototype.contains = function(substring) {
+    return this.toLowerCase().indexOf(substring) !== -1;
+  };
+
   var CategoryList = React.createClass({
     render: function() {
       var categories = this.props.categories.map(function(category) {
@@ -81,12 +85,18 @@
     },
 
     onUserInput: function(filterText) {
+      filterText = filterText.toLowerCase();
+
       var data = this.props.data;
       if (filterText !== '') {
         data =
           _(this.props.data)
           .filter(function (datum) {
-            return datum.name.indexOf(filterText) !== -1;
+            var nameMatches = datum.name.contains(filterText);
+            var tagsMatch = _(datum.tags)
+                              .map(function(tag) { return tag.contains(filterText); })
+                              .any();
+            return tagsMatch || nameMatches;
           })
           .value();
       }
@@ -103,7 +113,7 @@
         </div>
 
         <div className="col-md-9">
-          <SearchBar onUserInput={this.onUserInput}/>
+          <SearchBar onUserInput={ this.onUserInput }/>
           <Tiles data={ this.state.filteredData } />
         </div>
 
