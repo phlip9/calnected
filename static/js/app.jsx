@@ -55,10 +55,16 @@
   });
 
   var SearchBar = React.createClass({
+    handleChange: function() {
+      this.props.onUserInput(this.refs.filterTextInput.getDOMNode().value);
+    },
+
     render: function() {
       return (
         <div className="row search-bar">
-          <input type="text" className="form-control" placeholder="Search..." />
+          <input type="text" className="form-control" placeholder="Search..."
+                 value={this.props.filterText} onChange={this.handleChange}
+                 ref="filterTextInput" />
         </div>
       );
     }
@@ -74,6 +80,20 @@
       };
     },
 
+    onUserInput: function(filterText) {
+      var data = this.props.data;
+      if (filterText !== '') {
+        data =
+          _(this.props.data)
+          .filter(function (datum) {
+            return datum.name.indexOf(filterText) !== -1;
+          })
+          .value();
+      }
+
+      this.setState({ filterText: filterText, filteredData: data });
+    },
+
     render: function() {
       return (
       <div className="row">
@@ -83,8 +103,8 @@
         </div>
 
         <div className="col-md-9">
-          <SearchBar />
-          <Tiles data={ sites } />
+          <SearchBar onUserInput={this.onUserInput}/>
+          <Tiles data={ this.state.filteredData } />
         </div>
 
       </div>
