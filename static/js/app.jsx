@@ -6,18 +6,18 @@
     {
       name: 'BearFacts',
       url: 'http://bearfacts.berkeley.edu',
-      tags: ['financial aid', 'registration', 'general']
+      tags: ['Financial Aid', 'Registration', 'General']
     },
     {
-      name: 'Financial Aid',
+      name: 'My Financial Aid',
       url: 'http://myfinaid.berkeley.edu',
-      tags: ['financial aid']
+      tags: ['Financial Aid']
     },
   ];
 
   var CategoryList = React.createClass({
     render: function() {
-      var categories = this.props.data.map(function(category) {
+      var categories = this.props.categories.map(function(category) {
         return (
           <a href="#" className="list-group-item">{category}</a>
         );
@@ -31,7 +31,7 @@
     }
   });
 
-  var TilesComponent = React.createClass({
+  var Tiles = React.createClass({
     render: function() {
       var tiles = this.props.data.map(function(datum) {
         return (
@@ -54,18 +54,37 @@
     }
   });
 
+  var SearchBar = React.createClass({
+    render: function() {
+      return (
+        <div className="row search-bar">
+          <input type="text" className="form-control" placeholder="Search..." />
+        </div>
+      );
+    }
+  });
+
   var AppComponent = React.createClass({
+
+    getInitialState: function() {
+      return {
+        selectedCategory: null,
+        filterText: '',
+        filteredData: this.props.data
+      };
+    },
 
     render: function() {
       return (
       <div className="row">
 
         <div className="col-md-3">
-          <CategoryList data={['General', 'Academics', 'Fun']} />
+          <CategoryList categories={['General', 'Academics', 'Fun']} />
         </div>
 
         <div className="col-md-9">
-          <TilesComponent data={ [ {name:'Foo Bar'}, {name:'Baz Quxx'}] } />
+          <SearchBar />
+          <Tiles data={ [ {name:'General'}, {name:'Academics'}, {name:'Fun'}] } />
         </div>
 
       </div>
@@ -73,5 +92,5 @@
     }
   });
 
-  React.renderComponent(<AppComponent />, document.getElementById('react-binding'));
+  React.renderComponent(<AppComponent data={sites} />, document.getElementById('react-binding'));
 })()
