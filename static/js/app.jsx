@@ -36,7 +36,7 @@
       var tiles = this.props.data.map(function(datum) {
         return (
           <div className="col-sm-4 col-lg-4 col-md-4">
-            <a href="http://google.com/">
+            <a href={ datum.url }>
               <div className="thumbnail">
                 <img src="http://placehold.it/300x300" alt="" />
                 <h4 className="caption">{ datum.name }</h4>
@@ -84,7 +84,7 @@
 
         <div className="col-md-9">
           <SearchBar />
-          <Tiles data={ [ {name:'General'}, {name:'Academics'}, {name:'Fun'}] } />
+          <Tiles data={ sites } />
         </div>
 
       </div>

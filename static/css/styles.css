@@ -7,6 +7,7 @@
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
+
 .caption {
     padding: 0 0 3rem 3rem !important;
     position: absolute;
