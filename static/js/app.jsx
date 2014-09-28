@@ -15,15 +15,23 @@
     },
   ];
 
+
   String.prototype.contains = function(substring) {
     return this.toLowerCase().indexOf(substring) !== -1;
   };
 
+
   var CategoryList = React.createClass({
     render: function() {
+      var props = this.props;
+
       var categories = this.props.categories.map(function(category) {
+        var clickHandler = props.onCategorySelect;
+        var onClick = function () {
+          clickHandler(category)
+        };
         return (
-          <a href="#" className="list-group-item">{category}</a>
+          <a href="#" className="list-group-item" onClick={onClick}>{category}</a>
         );
       });
 
@@ -78,38 +86,59 @@
 
     getInitialState: function() {
       return {
-        selectedCategory: null,
         filterText: '',
+        selectedCategory: '',
         filteredData: this.props.data
       };
     },
 
-    onUserInput: function(filterText) {
-      filterText = filterText.toLowerCase();
+    filterData: function(filterText, selectedCategory) {
+      var filter = filterText.toLowerCase();
+      var category = selectedCategory.toLowerCase();
 
-      var data = this.props.data;
-      if (filterText !== '') {
-        data =
-          _(this.props.data)
-          .filter(function (datum) {
-            var nameMatches = datum.name.contains(filterText);
+      var data = _(this.props.data);
+      if (filter !== '') {
+        data = data.filter(function (datum) {
+            var nameMatches = datum.name.contains(filter);
             var tagsMatch = _(datum.tags)
-                              .map(function(tag) { return tag.contains(filterText); })
+                              .map(function(tag) { return tag.contains(filter); })
                               .any();
             return tagsMatch || nameMatches;
-          })
-          .value();
+          });
       }
 
-      this.setState({ filterText: filterText, filteredData: data });
+      if (category !== '') {
+        data = data.filter(function (datum) {
+          return _(datum.tags)
+                   .map(function (tag) { return tag.contains(category); })
+                   .any();
+        });
+      }
+
+      this.setState({ filterText: filterText, selectedCategory: selectedCategory, filteredData: data.value() });
+    },
+
+    onCategorySelect: function(category) {
+      this.filterData(this.state.filterText, category);
+    },
+
+    onUserInput: function(filterText) {
+      this.filterData(filterText, this.state.selectedCategory);
     },
 
     render: function() {
+      var categories = _(this.props.data)
+                         .map(function(datum) { return datum.tags; })
+                         .flatten()
+                         .uniq()
+                         .sortBy()
+                         .value();
+
       return (
       <div className="row">
 
         <div className="col-md-3">
-          <CategoryList categories={['General', 'Academics', 'Fun']} />
+          <CategoryList onCategorySelect={this.onCategorySelect} categories={categories} />
         </div>
 
         <div className="col-md-9">
