@@ -11,15 +11,14 @@ a:hover {
 
 /* Custom default button */
 .btn-default,
+.btn-default:hover,
 .btn-default:focus {
-  color: #FDB515;
+  color: #003262;
   text-shadow: none; /* Prevent inheritence from `body` */
-  background-color: #FDB515;
+  background-color: #003262;
   border: 1px solid #fff;
 }
-.btn .btn-lg .btn-default:hover{
-  color: #003262;
-}
+
 
 /*
  * Base structure
@@ -28,7 +27,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  color:#FDB515
+  background-color:#FDB515
 }
 body {
   text-align: center;
@@ -202,4 +201,14 @@ body {
 .blue{
   opacity: 1;
   color:#003262;
+}
+.back{
+  background-color: #003262;
+}
+.col-lg-4{
+  color:#FDB515;
+}
+.yellow {
+  color:#FDB515;
+  font-size: 60px;
 }
