@@ -131,8 +131,6 @@
 
     {url:'http://ist.berkeley.edu/software-central', name:'Software for UC Berkeley students', tags: ['Software']},
 
-    {url:'https://berkeley.box.com/files', name:'50 GB of free storage from box.com for UC Berkeley students', description:'FIFTY GIGS of free space! In Fall 2012, Dropbox also ran its Space Race, which gave all Berkeley students that signed up with their .edu emails 25 gigs for free for getting so many signups. Not sure if this is still true, but you could always try.', tags: ['Software']},
-
     {url:'http://ocf.berkeley.edu/', name:'Open Computing Facility (OCF)',  description:'The OCF is a student-run organization that provides a lot of free stuff. Make an account, and you get 250 pages of free printing per semester, an @ocf.berkeley.edu email, SSH, a database, and 2 GB of web space if you want them. This webpage is hosted by the OCF.', tags: ['Software']},
 
     {url:'https://www.facebook.com/groups/266259930135554/', name:'Free and For Sale', description:'Buy and sell anything you want here.', tags: ['Trading']},

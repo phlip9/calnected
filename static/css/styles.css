@@ -14,7 +14,7 @@ body {
     position: absolute;
     margin-bottom: 20px;
     bottom: 0;
-    background-color: #e7e9fd;
+    background-color: #5677fc;
 }
 
 .caption {
@@ -27,20 +27,23 @@ body {
     font-size: 20px;
     font-weight: 900;
     text-transform: uppercase;
+    color: #eee !important;
 }
 
 .thumbnail img {
     width: 100%;
+    box-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
 }
 
 .thumbnail {
     padding: 0;
 }
-/*
-@-webkit-keyframes border-radius { from{ border-radius: 0; } to{ border-radius: 50%; } }
 
-.thumbnail img:hover {
-    -webkit-animation: border-radius 1s ease; 
+/*
+@-webkit-keyframes transform { from{ transform: scale(1,1); } to{ transform: scale(1.1,1.1); } }
+
+.thumbnail:hover {
+    -webkit-animation: transform 3s ease-out; 
 }*/
 
 .search-bar {
