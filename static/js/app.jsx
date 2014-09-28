@@ -98,6 +98,7 @@
     {url:'https://kloudless.com/cal/', name:'Kloudless',  descriptions:'Does the same thing as BearCheck - notifies you of an open space in a class.', tags: ['Academics', 'Classes']}
   ];
 
+
   String.prototype.contains = function(substring) {
     return this.toLowerCase().indexOf(substring) !== -1;
   };
@@ -109,11 +110,17 @@
 
       var categories = this.props.categories.map(function(category) {
         var clickHandler = props.onCategorySelect;
+        var selected = props.selectedCategory === category;
         var onClick = function () {
-          clickHandler(category)
+          if (props.selectedCategory === category) {
+            clickHandler('');
+          } else {
+            clickHandler(category)
+          }
         };
+        var className = "list-group-item" + (selected ? " selected" : "");
         return (
-          <a href="#" className="list-group-item" onClick={onClick}>{category}</a>
+          <a href="#" className={className} onClick={onClick}>{category}</a>
         );
       });
 
@@ -128,14 +135,13 @@
   var Tiles = React.createClass({
     render: function() {
       var tiles = this.props.data.map(function(datum) {
+        var colSize = "col-sm-4 col-lg-4"
         return (
           <div className="col-sm-4 col-lg-4 col-md-4">
-            <a href={ datum.url }>
               <div className="thumbnail">
                 <img src="http://placehold.it/300x300" alt="" />
-                <h4 className="caption">{ datum.name }</h4>
+                <a href={ datum.url }><h4 className="caption">{ datum.name }</h4></a>
               </div>
-            </a>
           </div>
         );
       });
@@ -170,6 +176,7 @@
       return {
         filterText: '',
         selectedCategory: '',
+        selectedTile: '',
         filteredData: this.props.data
       };
     },
@@ -220,7 +227,7 @@
       <div className="row">
 
         <div className="col-md-3">
-          <CategoryList onCategorySelect={this.onCategorySelect} categories={categories} />
+          <CategoryList selectedCategory={this.state.selectedCategory} onCategorySelect={this.onCategorySelect} categories={categories} />
         </div>
 
         <div className="col-md-9">
