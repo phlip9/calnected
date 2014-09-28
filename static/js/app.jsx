@@ -98,6 +98,174 @@
     {url:'https://kloudless.com/cal/', name:'Kloudless',  descriptions:'Does the same thing as BearCheck - notifies you of an open space in a class.', tags: ['Academics', 'Classes']}
   ];
 
+
+var fun =[
+
+{url:'http://roomres.fuqu.jp/', name:'Room Reservation System', description:'Have you ever tried to reserve rooms for events in Berkeley? The results often turn out something like this. Refresh it! '},
+
+{url:'http://ucbbg.tumblr.com/', name:'UC Berkeley Bathroom Graffiti', description:'A collection of Berkeley's bathroom graffiti. '},
+
+{url:'https://www.facebook.com/ucberkeley.love?fref=ts', name:'Berkeley Love',  description:'Spread the love...'},
+
+{url:'https://www.facebook.com/humans.berkeley', name:'Humans of Berkeley',  description:'Berkeley's version of Humans of New York.'},
+
+{url:'https://www.facebook.com/berkeley.story.collective', name:'Berkeley Story Collective',  description:'Similar to Humans of Berkeley, but with longer narratives; professors included.'},
+
+{url:'https://www.facebook.com/groups/295317910489086/', name:'Overheard at Cal',  description:'Silly things heard at Berkeley.'},
+
+{url:'http://ist.berkeley.edu/software-central', name:'Software for UC Berkeley students'},
+
+{url:'https://berkeley.box.com/files', name:'50 GB of free storage from box.com for UC Berkeley students', description:'FIFTY GIGS of free space! In Fall 2012, Dropbox also ran its Space Race, which gave all Berkeley students that signed up with their .edu emails 25 gigs for free for getting so many signups. Not sure if this is still true, but you could always try.'},
+
+{url:'http://ocf.berkeley.edu/', name:'Open Computing Facility (OCF)',  description:'The OCF is a student-run organization that provides a lot of free stuff. Make an account, and you get 250 pages of free printing per semester, an @ocf.berkeley.edu email, SSH, a database, and 2 GB of web space if you want them. This webpage is hosted by the OCF.'}];
+
+
+var trading =[{url:'https://www.facebook.com/groups/266259930135554/', name:'Free and For Sale', description:'Buy and sell anything you want here.'},
+
+{url:'http://buynear.me/', name:'Buynear.me',  description:'Buynear.me lets on Berkeley students input what they want to sell. You can filter by items and see prices. It also helps you auto-post to several Facebook groups.'},
+
+{url:'http://www.ucbmealpoints.com/', name:'Berkeley Meal Points Exchange', description:' Lets you do exchanges for meal points (keep this hush-hush!). I wish I had found this earlier. Excess meal points is an extremely common issue. '},
+
+{url:'http://www.uloop.com/', name:'Uloop',  description:'Classifieds for college students'},
+
+{url:'http://www.uskarma.com/', name:'Karma', description:'Exchange favors with other students. (Coming soon)'}];
+
+var housing= {url:'http://housing.berkeley.edu/', name:'Housing',  description:'Official housing site.'},
+
+{url:'https://maintenance.housing.berkeley.edu/', name:'Maintenance Requests', description:'Submit a request here if anything in your residence hall is broken or malfunctioning.'},
+
+{url:'http://services.housing.berkeley.edu/c1c/dyn/laundry.asp', name:'Laundry Web', description:'Check the status of the laundry machines in your building.'},
+
+{url:'http://rescomp.berkeley.edu/', name:'ResComp',  description:'Login to Helpdesk to view your quota or for help with your in-room internet connection.'},
+
+{url:'http://calrentals.housing.berkeley.edu/', name:'Cal Rentals',  description:'Official UC Berkeley listing of places for rent.'},
+
+{url:'http://www.bsc.coop/', name:'Berkeley Co-ops',  description:'Berkeley cooperative housing.'},
+
+{url:'https://www.padmapper.com/', name:'PadMapper',  description:'Find apartments up for rent here. '},
+
+{url:'https://www.facebook.com/groups/groupsatberkeley/', name:'Find your building's Facebook group.'}];
+
+var transportation = [
+
+{url:'http://www.berkeley.edu/map/', name:'Campus Map',  description:'Go somewhere on campus.'},
+
+{url:'http://admissions.berkeley.edu/map/', name:'3D Campus Map',  description:'Really cool 3D campus map.'},
+
+{url:'http://bearwalk.berkeley.edu/', name:'Bearwalk',  description:'If you want to go from one place to another at night, Bearwalk can walk you. You can request one and check the status of your request from this site.'},
+
+{url:'http://pt.berkeley.edu/around/transit/routes', name:'Parking and Transportation',  description:'Shuttle routes and schedules.'},
+
+{url:'http://www.actransit.org/maps/', name:'AC Transit',  description:'AC Transit maps and schedules.'},
+
+{url:'http://www.nextbus.com/predictor/stopSelector.jsp?a=actransit', name:'NextBus',  description:'Check when the next AC Transit bus to your stop is coming. '},
+
+{url:'https://www.clippercard.com/ClipperWeb/index.do', name:'Clipper Card', description:'RFID card means you go "beep" at the Clipper stand to pay for public transportation anywhere in the Bay Area.'},
+
+{url:'http://bart.gov/', name:'BART',  description:'Subway all around the Bay Area.'}
+
+{url:'http://www.zipcar.com/calstudent', name:'ZipCar',  description:'Rent a car to drive somewhere.'},
+
+{url:'https://www.uber.com//', name:'Uber',  description:'Uber is essentially a higher-end on-call taxi service.'}];
+
+
+var food= [{url:'http://services.housing.berkeley.edu/FoodPro/dining/static/todaysentrees.asp', name:'CalDining's Menu for Today',  description:'Check here to decide where to eat.'},
+
+{url:'http://inst.cr/t/6m4sgy', name:'Instacart',  description:'Get food from Trader Joe's, Whole Foods, or Safeway shipped right to your door!'},
+
+{url:'https://www.spoonrocket.com/', name:'SpoonRocket',  description:'Pick from a few different choices and get it delivered to your door for $6. Menu changes every day.'},
+
+ {url:'http://ghettodelivery.com/', name:'Ghetto Delivery',  description:'Food delivery service from (Southside) Asian Ghetto/Durant Food Court. Here's a code for free delivery: getitnow'}];
+
+var money = [
+{url:'https://myfinaid.berkeley.edu/myfinaid/home.html', name:'MyFinAid', description:' View your financial aid for Berkeley.'},
+
+{url:'https://eftstudent.berkeley.edu/', name:'Electronic Funds Transfer',  description:'url your bank account to receive refunds from CARS.'}];
+
+var jobs =
+
+{url:'http://callisto.berkeley.edu/', name:'Callisto',  description:'The Career Center's site for helping you find a job. There are so many internships and jobs listed here. '},
+
+{url:'http://workstudy.berkeley.edu/JobSearch.aspx', name:'Work Study',  description:'Work study listing of jobs. '},
+
+{url:'https://blu.is.berkeley.edu/', name:'Blu', description:'The employee portal designed to be your one-stop employee resource for personalized access to information, services and online resources.'},
+
+{url:'http://atyourservice.ucop.edu/', name:'At Your Service',  description:'Resouces for Berkeley employees. },
+
+{url:'http://research.berkeley.edu/urap/index.php', name:'URAP',  description:'URAP, or the Undergraduate Research Apprentice Program, is a program where students can apply to assist in the research of Berkeley faculty.'},
+
+{url:'http://www.urledin.com/', name:'urledIn',  description:'The ever-important urledIn - basically like Facebook but centered around your resume, where your friends are your connections. '},
+
+{url:'http://www.internmatch.com/', name:'InternMatch',  description:'Find an internship here. {url:'http://www.firstjob.com/', name:'FirstJob',  description:'Find a job here. '},
+
+{url:'http://www.mycloverink.com/', name:'Clover Ink',  description:'Post your resume and easily find and apply to job offers.'},
+
+{url:'http://occuhunt.com/', name:'Occuhunt',  description:'Map of tables at Berkeley's career fairs with descriptions of the companies - updated every career fair. Now with resume critiques too.'},
+
+{url:'http://join.hired.com/x/RUGWAE', name:'Hired',  description:'Hired makes tech companies bid to hire you (and you can choose who to interview with) - all you have to do is fill out a profile similar to that of urledIn.'}];
+
+var events= [
+
+{url:'https://calurl.berkeley.edu/', name:'Calurl',  description:'Search clubs/organizations and events going on on campus. '},
+
+{url:'http://events.berkeley.edu/', name:'UC Berkeley Events',  description:'Official listing of all events in Berkeley.'},
+
+{url:'http://studentcentral.berkeley.edu/calendar', name:'Student Calendar'},
+
+{url:'http://rumblii.com/', name:'Rumblii'}
+
+{url:'http://www.calbeat.com/', name:'CalBeat',  description:'A better way to search clubs/organizations on campus.'},
+
+{url:'http://www.socialplex.com/', name:'Socialplex',  description:'A site that lists events at Berkeley, it seems like... not yet open. '}];
+
+var advice = [
+
+{url:'http://calask.com/', name:'CalAsk',  description:'Have any questions about Berkeley? Find the answer here!'},
+
+{url:'http://tinyurl.com/berkeleyfaq', name:'Berkeley FAQ',  description:'The Google Docs predecessor version of CalAsk.'},
+
+{url:'http://bearablygolden.tumblr.com/', name:'Bearably Golden',  description:'One of my friends' Berkeley Tumblr filled with advice (and pictures)'},
+
+{url:'http://blog.admissions.berkeley.edu/', name:'Golden Bear Blog',  description:'Blog written for incoming Berkeley students by the Office of Undergraduate Admissions. '},
+
+{url:'http://www.jamesmaa.com/2012/12/02/james-maas-productivity-hacking-guide/', name:'Productivity Hacking Guide',  description:'The most helpful guide ever written to help you become more productive. Written by James Maa from the Class of 2016.'},
+
+{url:'http://www.jamesmaa.com/2013/08/26/a-beginners-guide-to-computer-science/', name:'A Beginnerâ€™s Guide to Computer Science'}];
+
+
+var tools=[ {url:'https://idc.berkeley.edu/mmk/', name:'Manage My Keys',  description:'Set your keys to use AirBears2 or bConnected on your devices.'},
+
+{url:'https://net-auth.berkeley.edu/cgi-bin/krbsync', name:'Synchronize CalNet PassPhrase',  description:'If your passphrases aren't synchronized, use this to fix it.'},
+
+{url:'https://kb.berkeley.edu/campus-shared-services/', name:'bConnected FAQ',  description:'Have any questions about using bConnected? Check here. '},
+
+{url:'https://developer.berkeley.edu/', name:'Berkeley API Central', description:'Want to make a tool/web app for Berkeley students and need to pull data from Berkeley? Here's APIs for you to use.'},
+
+{url:'https://github.com/edu', name:'Github Educational Accounts',  description:'Github is a great tool to backup, collaborate, and merge code together. Anyone with a .edu email can get a free upgrade to a Micro plan, which includes free private repositories. '},
+
+{url:'http://szhu.me/subl', name:'Install Sublime in Soda',  description:'A super-awesome script to install Sublime Text editor on the lab machines in Soda. Woo, no more Emacs/Vi(m).'},
+
+{url:'https://www.rescuetime.com/ref/580690~', name:'Rescuetime',  description:'Track how much time you're spending at your computer, and at which sites and which programs. Gives you a weekly report with exactly how many hours you spent at your computer, and your productivity score. Highly recommended. '},
+
+{url:'http://bit.ly/Prezi4Cal', name:'Prezi',  description:'Make animated, detailed infographics to give presentations from - basically like a really fancy slideshow. Sign up with your .edu email to get free edu membership, which removes the logo and gives you more storage space, in addition to some other features.'},
+
+{url:'http://bit.ly/LastPass4Cal', name:'LastPass',  description:'Super-handy add-on to save your passwords on Firefox/Chrome/etc. Apparently having an .edu email gives you 6 free months of LastPass Premium as opposed to the free version.'}];
+
+var miscellaneous=[
+
+{url:'http://police.berkeley.edu/newselist.html/', name:'UCPD Email List'},
+
+{url:'http://police.berkeley.edu/lostnfound/', name:'UCPD Lost and Found'},
+
+{url:'https://www.facebook.com/berkeleylostkeys', name:'UC Berkeley Lost Keys',  description:'Lost or found keys? Post here.'},
+
+{url:'http://dailycal.org/', name:'The Daily Californian',  description:'The Daily Cal, official newspaper of UC Berkeley.'},
+
+{url:'http://calibermag.org/', name:'Caliber',  description:'Caliber, the magazine for UC Berkeley.'},
+
+{url:'http://www.innod.net/request/', name:'Innovative Design',  description:'Innovative Design (or Inno D) is a student-run organization for students to learn and practice graphic design and photography. If you are part of a student organization, you can request for Inno D to make a gorgeous logo or flyers for your organization for free, under the "Request" tab. '}];
+
+
   String.prototype.contains = function(substring) {
     return this.toLowerCase().indexOf(substring) !== -1;
   };
