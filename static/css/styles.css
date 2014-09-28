@@ -8,6 +8,15 @@ body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
 }
 
+.colored-box {
+    width: 89%;
+    height: 40%;
+    position: absolute;
+    margin-bottom: 20px;
+    bottom: 0;
+    background-color: #e7e9fd;
+}
+
 .caption {
     padding: 0 3rem 3rem 3rem !important;
     position: absolute;
@@ -27,6 +36,12 @@ body {
 .thumbnail {
     padding: 0;
 }
+/*
+@-webkit-keyframes border-radius { from{ border-radius: 0; } to{ border-radius: 50%; } }
+
+.thumbnail img:hover {
+    -webkit-animation: border-radius 1s ease; 
+}*/
 
 .search-bar {
     margin-left: 0;
